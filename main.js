@@ -55,35 +55,35 @@ console.log(keypress);
 
 if(keypress == '70'){
 
-  new_image(ironman_face.png);
+  new_image("ironman_face.png");
   console.log("F");
 
 }
 
 if(keypress == '66'){
 
-    new_image(ironman_body.png);
+    new_image("ironman_body.png");
     console.log("B");
   
 }
 
 if(keypress == '76'){
 
-    new_image(ironman_legs.png);
+    new_image("ironman_legs.png");
     console.log("L");
   
 }
 
 if(keypress == '84'){
 
-    new_image(ironaman_right_hand.png);
+    new_image("ironaman_right_hand.png");
     console.log("R");
   
 } 
 
 if(keypress == '72'){
 
-    new_image(captain_america_left_hand.png);
+    new_image("captain_america_left_hand.png");
     console.log("H");
   
 } 

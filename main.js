@@ -6,6 +6,9 @@ var block_width = 30;
 var player_img_X = 10;
 var player_img_Y = 10;
 
+var player_objects = "";
+var block_image_objects = "";
+
 function player_update(){
 
     fabric.Image.fromURL("black panther.png", function(Img) {

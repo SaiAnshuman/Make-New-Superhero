@@ -11,7 +11,7 @@ var block_image_objects = "";
 
 function player_update(){
 
-    fabric.Image.fromURL("black panther.png", function(Img) {
+    fabric.Image.fromURL("black_panther.png", function(Img) {
     
     player_objects = Img;
     player_objects.scaleToWidth(150);
@@ -56,6 +56,27 @@ function myKeydown(e){
 var keypress = e.keyCode;
 console.log(keypress);
 
+if(e.shiftKey == true && keypress == '80'){
+
+    console.log("P And Shift Pressed ToGether");
+    block_height = block_height + 10;
+    block_width = block_width + 10;
+    document.getElementById("current_width").innerHTML = block_width;
+    document.getElementById("current_height").innerHTML = block_height;
+
+}
+
+if(e.shiftKey == true && keypress == '77'){
+
+    console.log("M And Shift Pressed ToGether");
+    block_height = block_height - 10;
+    block_width = block_width - 10;
+    document.getElementById("current_width").innerHTML = block_width;
+    document.getElementById("current_height").innerHTML = block_height;
+
+}
+
+
 if(keypress == '70'){
 
   new_image("ironman_face.png");
@@ -77,9 +98,9 @@ if(keypress == '76'){
   
 }
 
-if(keypress == '84'){
+if(keypress == '82'){
 
-    new_image("ironaman_right_hand.png");
+    new_image("right_hand.png");
     console.log("R");
   
 } 
@@ -137,7 +158,7 @@ function down(){
 
     if(player_img_Y <= 500){
  
-        player_img_Y = player_img_Y - block_height;
+        player_img_Y = player_img_Y + block_height;
       console.log("Block Image Height = " + block_height);
       console.log("When Down Is pressed, X= "+player_img_X + ", Y =" + player_img_Y);
       canvas.remove(player_objects);
@@ -165,7 +186,7 @@ function right(){
 
     if(player_img_X <= 850){
  
-        player_img_X = player_img_X - block_width;
+        player_img_X = player_img_X + block_width;
       console.log("Block Image Height = " + block_width);
       console.log("When Right Is pressed, X= "+player_img_X + ", Y =" + player_img_Y);
       canvas.remove(player_objects);
